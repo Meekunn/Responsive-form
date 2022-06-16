@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/781571eb05.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
@@ -18,18 +19,35 @@
                 <h1>Learn to code by watching others</h1>
                 <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
             </div>
-            <form class="form-container">
+            <div class="form-container">
                 <button><span style="font-weight: 900;">Try it free 7 days</span> then $20/mo. thereafter</button>
-                <div class="form">
-                    <input type="text" placeholder="First Name" required>
-                    <input type="text" placeholder="Last Name" required>
-                    <input type="email"placeholder="Email Address" required>
-                    <input type="password" placeholder="Password" required>
-                    <button type="submit">CLAIM YOUR FREE TRIAL</button>
+                <form class="form" id="form">
+                    <div class="input">
+                        <input id="fname" type="text" name="fname" placeholder="First Name">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="input">
+                        <input id="lname" type="text" name="lname" placeholder="Last Name">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="input">
+                        <input id="email" type="email" name="email" placeholder="Email Address">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="input">
+                        <input id="password" type="password" name="password" placeholder="Password">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <button type="submit" id="button">CLAIM YOUR FREE TRIAL</button>
                     <p>By clicking the button, you are agreeing to our <a href="'#">Terms and Services</a> </p>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </main>
+    <script src="./index.js"></script>
 </body>
 </html>

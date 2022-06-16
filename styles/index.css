@@ -62,36 +62,57 @@ main {
     margin-bottom: 5rem;
     box-shadow: 0 8px #2c2a2a66;
 }
-.form input {
+.input {
+    position: relative;
+    padding-bottom: 10px;
+}
+.input input {
     border: 1px solid #3E3C49;
     opacity: 0.7;
     outline: none;
     border-radius: 5px;
     padding: 1rem;
     font-size: 0.8rem;
-}
-.form input:required {
-    background: url(../assets/images/icon-error.svg);
-    border: 2px solid #FF7A7A;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: -20px -20px;
-}
-.form input::placeholder {
+    width: 100%;
     font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    color: #2f2e35;
+}
+.input input:focus {
+    border: 2px solid #6055A5;
+    caret-color: #6055A5;
+}
+.input input::placeholder {
     color: #3E3C49;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.5px;
 }
-.form input:focus {
-    color: #2f2e35;
-    border: 2px solid #6055A5;
-    caret-color: #6055A5;
-    font-weight: 900;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.5px;
+.input.error input {
+    border: 2px solid #FF7A7A;
 }
-.form > button {
+.input i {
+	visibility: hidden;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+    color: #FF7A7A;
+}
+.input.error i{
+	visibility: visible;
+}
+.input small {
+	color: #FF7A7A;
+	position: absolute;
+	bottom: -10px;
+	right: 0;
+	visibility: hidden;
+    font-style: italic;
+}
+.input.error small {
+	visibility: visible;
+}
+.form button {
     background-color: #38CC8C;
     color: #fff;
     padding: 1rem;
@@ -102,6 +123,9 @@ main {
     font-size: 1rem;
     font-weight: 500;
     box-shadow: 0 -4px #0dbd71 inset;
+}
+.form button:hover, .form button:focus {
+    background-color: #5cdba4;
 }
 .form > p {
     font-size: 0.7rem;
